@@ -4,13 +4,10 @@ from pymongo import MongoClient
 import json
 from bson import json_util
 from bson.json_util import dumps
-import dns # required for connecting with SRV
-import csv
-from pathlib import Path
 
 app = Flask(__name__)
 
-URI_string = "mongodb+srv://explorer:1234567890@datacenter-nfv4t.gcp.mongodb.net/test?retryWrites=true&w=majority"
+URI_string = "mongodb://localhost:27017/"
 
 @app.route("/")
 def index():
